@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        var practice by the cart queantity project
+    </title>
+</head>
+<body>
+    <h3>Card Quantity</h3>  
+
+    <button  onclick="console.log(`Card Quantity: ${cardQuantity}`);"> 
+    Show Quantity 
+</button>
+    <button onclick="
+    cardQuantity++;
+    console.log('Cart Updated');
+    console.log(`Card Quantity: ${cardQuantity}
+    `);" > 
+    Add to cart</button>
+
+    <button   onclick="
+    cardQuantity += 2;
+    console.log('Cart Updated');
+    console.log(`Card Quantity: ${cardQuantity}
+    `);"  > +2 </button>
+
+    <button  onclick="
+    cardQuantity += 3;
+    console.log('Cart Updated');
+    console.log(`Card Quantity: ${cardQuantity}
+    `);" > +3 </button>
+
+    <button  onclick="
+    cardQuantity = 0;
+    console.log('Cart was Reset');
+    console.log(  `Card Quantity: ${cardQuantity}
+    `);" > Reset Cart </button>
+
+        <script>
+            let cardQuantity = 0;
+        </script>
+</html>

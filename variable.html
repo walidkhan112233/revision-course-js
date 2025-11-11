@@ -1,43 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h3>Card Quantity</h3>  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>var practice</title>
+  </head>
+  <body>
+    <script>
+      let var1 = 3;
+      console.log(var1);
 
-    <button  onclick="console.log(`Card Quantity: ${cardQuantity}
-    `);"> 
-    Show Quantity 
-</button>
-    <button onclick="
-    cardQuantity = cardQuantity + 1;
-    console.log('Cart Updated');
-    console.log(`Card Quantity: ${cardQuantity}
-    `);" > 
-    Add to cart</button>
+      const text = "Hello World";
+      console.log(text);
+      /*instead of let use const for a constant value 
+       use const where we dont need to change the value init */
+      const calculation = 4 * 4;
+      console.log(calculation);
+      console.log(calculation + 2);
+      // (;)is very iimportant as it ends an instructuion which will not make the computer to give an error
+      // ; is very important in separating two instructions
+      // ; is mandatory
 
-    <button   onclick="
-    cardQuantity = cardQuantity + 2;
-    console.log('Cart Updated');
-    console.log(`Card Quantity: ${cardQuantity}
-    `);"  > +2 </button>
-
-    <button  onclick="
-    cardQuantity = cardQuantity + 3;
-    console.log('Cart Updated');
-    console.log(`Card Quantity: ${cardQuantity}
-    `);" > +3 </button>
-
-    <button  onclick="
-    cardQuantity = 0;
-    console.log('Cart was Reset');
-    console.log(  `Card Quantity: ${cardQuantity}
-    `);" > Reset Cart </button>
-
-        <script>
-            let cardQuantity = 0;
-        </script>
+      console.log(typeof var1);
+      //we can use typeof on variable too in order to find the typeof value that is saved in the variable
+      console.log(typeof text);
+    </script>
+  </body>
 </html>
