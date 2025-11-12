@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+
+      console.log(typeof true); // "boolean"
+      // Boolean values can be either true or false
+      console.log(5 === 6); // false
+      console.log(5 < 6); // true
+
+      // The result of a comparison is a boolean value
+      // use === for strict equality comparison instead of == which converts types
+
+      console.log(5 == "5"); // true (not strict)
+      console.log(5 === "5"); // false (strict)
+      //always use === to avoid unexpected type coercion
+
+        // if statement example
+
+
+
+        if (5 > 3) { 
+          // if condition is true, the block runs ifnot it is skipped and goes to else
+          console.log("5 is greater than 3");
+        }  else { 
+          // else only runs when the if condition is false
+          console.log("5 is not greater than 3");
+        }
+
+
+        const age = 17; // we can have boolean conditions based on variables too
+        if (age >= 18) {
+          console.log("You are an adult."); 
+        } else if (age === 17) {  // else if helps us to check multiple conditions
+          console.log("Almost there!!!");
+        }  else {
+          console.log("You are a minor.");
+        }
+        
+    </script>
+  </body>
+</html>
