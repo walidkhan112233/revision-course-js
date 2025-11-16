@@ -40,8 +40,7 @@
         console.log("You are a minor.");
       } */
 
-
-    /* ternary operater example:
+      /* ternary operater example:
 
     in if statements we write like this 
 
@@ -54,16 +53,43 @@
        }
        console.log(result);*/
 
-      // shortcut to this in ternary operator will be 
-      // advantage of ternary operator is that it makes code concise and readable and short 
-      //and we can assign  the condition statements directly in variable too 
+      // shortcut to this in ternary operator will be
+      // advantage of ternary operator is that it makes code concise and readable and short
+      //and we can assign  the condition statements directly in variable too
 
-      let result = (1 + 3 > 3) ? true : false;
-      // statement before the ? is the condition 
-      // statement after ? is what to do if condition is true  
+      let result = 1 + 3 > 3 ? true : false;
+      // statement before the ? is the condition
+      // statement after ? is what to do if condition is true
       // statement after : is what to do if condition is false
       console.log(result);
-      
+
+      /* ternary operator ( ? : ) , Guard operator (&&) and Deafult operator (||) are just shortcut of if statements 
+      for concise code and to save some extra typing*/
+
+      // Example of Guard operator (&&)
+      // Guard operator have a speacial feature as called short circuit evaluation
+      // it stops evaluating as soon as it finds the first false condition even if its the first one it doesnt even run the code after it
+      //for example:
+      const message = false && console.log("2nd value");
+      // in console nothing will be printed bcz first value is false so it stops evaluating further
+      //now if we console
+      console.log(message); // false
+      // now if we make first value true
+      const message2 = true && console.log("2nd value");
+      // console will print 2nd value bcz first value is true so it evaluates further
+      // this is how guard operator works
+
+      // Example of Default operator (||)
+      // Default operator also have a speacial feature as called short circuit evaluation
+      // it stops evaluating as soon as it finds the first true condition even if its the first
+      //for example:
+      const msg = true || console.log("value");
+      console.log(msg); // true
+      // now if we make first value false
+      const msg2 = false || console.log("22 value");
+      // console will print 22 value bcz first value is false so it evaluates further
+      // this is how default operator works
+     
     </script>
   </body>
-</html>
+</html> 
