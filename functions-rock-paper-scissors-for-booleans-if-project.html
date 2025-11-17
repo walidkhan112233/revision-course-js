@@ -10,7 +10,7 @@
     <br />
     <button
       onclick="
-           pickcomputerMover();
+          const computerChoice =  pickcomputerMove();
 
      let result = '';
         if (computerChoice === 'rock') {
@@ -28,7 +28,7 @@
     </button>
     <button
       onclick="
-        pickcomputerMover();
+       const computerChoice = pickcomputerMove();
 
         let result = '';
         if (computerChoice === 'rock') {
@@ -46,7 +46,7 @@
     </button>
     <button
       onclick="
-       pickcomputerMover();
+       const computerChoice = pickcomputerMove();
      let result = '';
         if (computerChoice === 'rock') {
             result = 'You Lose!';
@@ -62,9 +62,9 @@
     </button>
 
     <script>
-      let computerChoice = "";
-      function pickcomputerMover() {
+      function pickcomputerMove() {
         const randomNumber = Math.random();
+        let computerChoice = "";
 
         if (randomNumber >= 0 && randomNumber < 0.33) {
           computerChoice = "rock";
@@ -73,6 +73,8 @@
         } else if (randomNumber >= 0.66 && randomNumber < 1) {
           computerChoice = "scissors";
         }
+
+        return computerChoice;
       }
     </script>
   </body>
