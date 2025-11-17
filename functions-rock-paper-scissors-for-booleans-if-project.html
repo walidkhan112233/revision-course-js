@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Rock Paper Scissors</h2>
+    <br />
+    <button
+      onclick="
+           pickcomputerMover();
+
+     let result = '';
+        if (computerChoice === 'rock') {
+            result = 'Tie!';
+        } else if (computerChoice === 'paper') {
+            result = 'You lose!';
+        } else if (computerChoice === 'scissors') {
+            result = 'You win!';
+        }
+
+        alert(`You Chose : Rock , Computer chose: ${computerChoice}. ${result}`);
+    "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+        pickcomputerMover();
+
+        let result = '';
+        if (computerChoice === 'rock') {
+            result = 'You win!';
+        } else if (computerChoice === 'paper') {
+            result = 'Tie!';
+        } else if (computerChoice === 'scissors') {
+            result = 'You Lose!';
+        }
+
+        alert(`You Chose : Paper, Computer chose: ${computerChoice}. ${result}`);
+    "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+       pickcomputerMover();
+     let result = '';
+        if (computerChoice === 'rock') {
+            result = 'You Lose!';
+        } else if (computerChoice === 'paper') {
+            result = 'You win!';
+        } else if (computerChoice === 'scissors') {
+            result = 'Tie!';
+        }
+
+        alert(`You Chose : Scissors, Computer chose: ${computerChoice}. ${result}`);"
+    >
+      Scissors
+    </button>
+
+    <script>
+      let computerChoice = "";
+      function pickcomputerMover() {
+        const randomNumber = Math.random();
+
+        if (randomNumber >= 0 && randomNumber < 0.33) {
+          computerChoice = "rock";
+        } else if (randomNumber >= 0.33 && randomNumber < 0.66) {
+          computerChoice = "paper";
+        } else if (randomNumber >= 0.66 && randomNumber < 1) {
+          computerChoice = "scissors";
+        }
+      }
+    </script>
+  </body>
+</html>
