@@ -10,58 +10,79 @@
     <br />
     <button
       onclick="
-          const computerChoice =  pickcomputerMove();
-
-     let result = '';
-        if (computerChoice === 'rock') {
-            result = 'Tie!';
-        } else if (computerChoice === 'paper') {
-            result = 'You lose!';
-        } else if (computerChoice === 'scissors') {
-            result = 'You win!';
-        }
-
-        alert(`You Chose : Rock , Computer chose: ${computerChoice}. ${result}`);
-    "
+      playGame('rock');
+      "
     >
       Rock
     </button>
     <button
       onclick="
-       const computerChoice = pickcomputerMove();
-
-        let result = '';
-        if (computerChoice === 'rock') {
-            result = 'You win!';
-        } else if (computerChoice === 'paper') {
-            result = 'Tie!';
-        } else if (computerChoice === 'scissors') {
-            result = 'You Lose!';
-        }
-
-        alert(`You Chose : Paper, Computer chose: ${computerChoice}. ${result}`);
+      playGame('paper');
     "
     >
       Paper
     </button>
     <button
       onclick="
-       const computerChoice = pickcomputerMove();
-     let result = '';
-        if (computerChoice === 'rock') {
-            result = 'You Lose!';
-        } else if (computerChoice === 'paper') {
-            result = 'You win!';
-        } else if (computerChoice === 'scissors') {
-            result = 'Tie!';
-        }
-
-        alert(`You Chose : Scissors, Computer chose: ${computerChoice}. ${result}`);"
+      playGame('scissors')
+      "
     >
       Scissors
     </button>
 
+
+
+
+     <!-- JavaScript Code -->
     <script>
+      function playGame(playerMove) {
+        if (playerMove === "rock") {
+          const computerChoice = pickcomputerMove();
+
+          let result = "";
+          if (computerChoice === "rock") {
+            result = "Tie!";
+          } else if (computerChoice === "paper") {
+            result = "You lose!";
+          } else if (computerChoice === "scissors") {
+            result = "You win!";
+          }
+
+          alert(
+            `You Chose : ${playerMove} , Computer chose: ${computerChoice}. ${result}`
+          );
+        } else if (playerMove === "paper") {
+          const computerChoice = pickcomputerMove();
+
+          let result = "";
+          if (computerChoice === "rock") {
+            result = "You win!";
+          } else if (computerChoice === "paper") {
+            result = "Tie!";
+          } else if (computerChoice === "scissors") {
+            result = "You Lose!";
+          }
+
+          alert(
+            `You Chose : ${playerMove}, Computer chose: ${computerChoice}. ${result}`
+          );
+        } else if (playerMove === "scissors") {
+          const computerChoice = pickcomputerMove();
+          let result = "";
+          if (computerChoice === "rock") {
+            result = "You Lose!";
+          } else if (computerChoice === "paper") {
+            result = "You win!";
+          } else if (computerChoice === "scissors") {
+            result = "Tie!";
+          }
+
+          alert(
+            `You Chose : ${playerMove}, Computer chose: ${computerChoice}. ${result}`
+          );
+        }
+      }
+
       function pickcomputerMove() {
         const randomNumber = Math.random();
         let computerChoice = "";
