@@ -24,7 +24,7 @@
     </button>
     <button
       onclick="
-      playGame('scissors')
+      playGame('scissors');
       "
     >
       Scissors
@@ -36,51 +36,37 @@
      <!-- JavaScript Code -->
     <script>
       function playGame(playerMove) {
-        if (playerMove === "rock") {
           const computerChoice = pickcomputerMove();
-
           let result = "";
+
+        if (playerMove === "rock") {
           if (computerChoice === "rock") {
             result = "Tie!";
           } else if (computerChoice === "paper") {
             result = "You lose!";
           } else if (computerChoice === "scissors") {
             result = "You win!";
-          }
-
+          }        
+        } else if (playerMove === "paper") {
+          if (computerChoice === "rock") {
+            result = "You win!";
+          } else if (computerChoice === "paper") {
+            result = "Tie!";
+          } else if (computerChoice === "scissors") {
+            result = "You Lose!";
+          }        
+        } else if (playerMove === "scissors") {
+          if (computerChoice === "rock") {
+            result = "You Lose!";
+          } else if (computerChoice === "paper") {
+            result = "You win!";
+          } else if (computerChoice === "scissors") {
+            result = "Tie!";
+          }        
+        }
           alert(
             `You Chose : ${playerMove} , Computer chose: ${computerChoice}. ${result}`
           );
-        } else if (playerMove === "paper") {
-          const computerChoice = pickcomputerMove();
-
-          let result = "";
-          if (computerChoice === "rock") {
-            result = "You win!";
-          } else if (computerChoice === "paper") {
-            result = "Tie!";
-          } else if (computerChoice === "scissors") {
-            result = "You Lose!";
-          }
-
-          alert(
-            `You Chose : ${playerMove}, Computer chose: ${computerChoice}. ${result}`
-          );
-        } else if (playerMove === "scissors") {
-          const computerChoice = pickcomputerMove();
-          let result = "";
-          if (computerChoice === "rock") {
-            result = "You Lose!";
-          } else if (computerChoice === "paper") {
-            result = "You win!";
-          } else if (computerChoice === "scissors") {
-            result = "Tie!";
-          }
-
-          alert(
-            `You Chose : ${playerMove}, Computer chose: ${computerChoice}. ${result}`
-          );
-        }
       }
 
       function pickcomputerMove() {
