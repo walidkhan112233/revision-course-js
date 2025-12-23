@@ -20,7 +20,27 @@
         // console.log(product.price); // accessing property using dot notation
         // console.log(product['brand']); // alternative way to access property
 
+        // inside an object we can also save any type of value 
+        const product2 = {
+            name: 'shirt',
+            price: 20,
+            'delivery-time': '3-5 business days',
+            colors: ['red', 'blue', 'green'],
+            rating:{
+                stars: 4.5,
+                count: 565,
+            }
+        };
+
+        console.log(product2);
+        console.log(product2['delivery-time']); // accessing property with hyphen using bracket notation
+        console.log(product2.colors); // accessing array property
+        console.log(product2.colors[1]); // accessing specific element in the array property    
+        console.log(product2.rating); // accessing nested object
+        console.log(product2.rating.stars); // accessing property of nested object
+
+        
         
     </script>
 </body>
-</html>  
+</html> 
